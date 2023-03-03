@@ -1,0 +1,14 @@
+# docker-compose to deploy this app with dockerfile
+version: '3.7'
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    environment:
+      - PORT=8080
+      - DB_URL
+      - PARAMS
