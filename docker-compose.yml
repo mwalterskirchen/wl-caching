@@ -12,3 +12,4 @@ services:
       - PORT
       - DB_URL
       - PARAMS
+      - NODE_ENV
